@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(45deg,black, rgb(0, 124, 77)) ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.calculadora{
+    height: 300px;
+    width: 300px;
+    border-radius: 5%;
+    background-color: #1d1d1d;
+}
+
+.titulo h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: #86ff7b;
+    margin-top: 3px;
+    text-align: center;
+}
+
+.button{
+    margin-left: 4px;
+}
+
+.butao{
+    background-color: rgb(181, 255, 111);
+    width: 50px;
+    height: 50px;
+    align-items: center;
+}
