@@ -14,7 +14,7 @@ body{
 }
 
 .calculadora{
-    height: 300px;
+    height: 400px;
     width: 300px;
     border-radius: 5%;
     background-color: #1d1d1d;
@@ -31,8 +31,21 @@ body{
     margin-left: 4px;
 }
 
+.button input{
+    font-size: larger;
+    text-align: right;
+    color: #000;
+    margin: 5px;
+    border-radius: 5%;
+    height: 20px;
+    width: 90%;
+    outline: none;
+}
+
 .butao{
     background-color: rgb(181, 255, 111);
+    border-radius: 50%;
+    margin: 1px;
     width: 50px;
     height: 50px;
     align-items: center;
