@@ -1,56 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feira De ciências</title>
     <link rel="stylesheet" href="static/aa.css">
 </head>
+
 <body>
     <div class="calculadora">
         <div class="titulo">
-            <h1 >calculdora</h1>
+            <h1>calculdora</h1>
         </div>
         <div class="button">
-                <input type="text" placeholder="0">
+            <form method="post">
+                <input type="text" name="display" value="{{ display }}" placeholder="0" readonly>
                 <table>
                     <tr>
-                        <td><button class="butao">x²</button></td>
-                        <td><button class="butao">√</button></td>
-                        <td><button class="butao">(</button></td>
-                        <td><button class="butao">)</button></td>
-                        <td><button class="butao" value="1"><-</button></td>
+                        <td><button class="butao" name="button" value="">x²</button></td>
+                        <td><button class="butao" name="button" value="">x²</button></td>
+                        <td><button class="butao" name="button" value="raiz">√</button></td>
+                        <td><button class="butao" name="button" value="porcentagem">%</button></td>
+                        <td><button class="butao" name="button" value="(">(</button></td>
+                        <td><button class="butao" name="button" value=")">)</button></td>
+                        <td><button class="butao" name="button" value="del"><-</button></td>
                     </tr>
                     <tr>
-                        <td><button class="butao" value="1">π</button></td>
-                        <td><button class="butao" value="1">1</button></td>
-                        <td><button class="butao" value="2">2</button></td>
-                        <td><button class="butao" value="3">3</button></td>
-                        <td><button class="butao" value="/">÷</button></td>
+                        <td><button class="butao" name="button" value="">x²</button></td>
+                        <td><button class="butao" name="button" value="">x²</button></td>
+                        <td><button class="butao" name="button" value="pi">π</button></td>
+                        <td><button class="butao" name="button" value="7">7</button></td>
+                        <td><button class="butao" name="button" value="8">8</button></td>
+                        <td><button class="butao" name="button" value="9">9</button></td>
+                        <td><button class="butao" name="button" value="/">÷</button></td>
                     </tr>
                     <tr>
-                        <td><button class="butao" value="1">sen</button></td>
-                        <td><button class="butao">4</button></td>
-                        <td><button class="butao">5</button></td>
-                        <td><button class="butao">6</button></td>
-                        <td><button class="butao">x</button></td>
+                        <td><button class="butao" name="button" value="">x²</button></td>
+                        <td><button class="butao" name="button" value="sen">sen</button></td>
+                        <td><button class="butao" name="button" value="log">log</button></td>
+                        <td><button class="butao" name="button" value="4">4</button></td>
+                        <td><button class="butao" name="button" value="5">5</button></td>
+                        <td><button class="butao" name="button" value="6">6</button></td>
+                        <td><button class="butao" name="button" value="*">x</button></td>
                     </tr>
                     <tr>
-                        <td><button class="butao" value="1">cos</button></td>
-                        <td><button class="butao">7</button></td>
-                        <td><button class="butao">8</button></td>
-                        <td><button class="butao">9</button></td>
-                        <td><button class="butao">-</button></td>
+                        <td><button class="butao" name="button" value="">x²</button></td>
+                        <td><button class="butao" name="button" value="cos">cos</button></td>
+                        <td><button class="butao" name="button" value="in">in</button></td>
+                        <td><button class="butao" name="button" value="1">1</button></td>
+                        <td><button class="butao" name="button" value="2">2</button></td>
+                        <td><button class="butao" name="button" value="3">3</button></td>
+                        <td><button class="butao" name="button" value="-">-</button></td>
                     </tr>
                     <tr>
-                        <td><button class="butao" value="1">tg</button></td>
-                        <td><button class="butao">0</button></td>
-                        <td><button class="butao">,</button></td>
-                        <td><button class="butao">=</button></td>
-                        <td><button class="butao">+</button></td>
+                        <td><button class="butao" name="button" value="">x²</button></td>
+                        <td><button class="butao" name="button" value="tg">tg</button></td>
+                        <td><button class="butao" name="button" value="">x²</button></td>
+                        <td><button class="butao" name="button" value="0">0</button></td>
+                        <td><button class="butao" name="button" value=".">,</button></td>
+                        <td><button class="butao" name="button" value="=">=</button></td>
+                        <td><button class="butao" name="button" value="+">+</button></td>
                     </tr>
                 </table>
+            </form>
         </div>
     </div>
 </body>
+
 </html>

@@ -14,8 +14,8 @@ body{
 }
 
 .calculadora{
-    height: 400px;
-    width: 300px;
+    height: 350px;
+    width: 400px;
     border-radius: 5%;
     background-color: #1d1d1d;
 }
@@ -28,7 +28,7 @@ body{
 }
 
 .button{
-    margin-left: 4px;
+    margin: 4px;
 }
 
 .button input{
