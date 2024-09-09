@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request
+import math as mt 
+import formulas as fm
 
 app = Flask(__name__)
 
@@ -16,7 +18,9 @@ def calculadora():
             except Exception as e:
                 display = ""
         elif button == "del":
-            pass
+            display = current_display[:-1]
+        elif button == "pi":
+            display = current_display + fm.pi()
         else:
             display = current_display + button
 
