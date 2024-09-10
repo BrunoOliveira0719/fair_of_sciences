@@ -21,6 +21,20 @@ def calculadora():
             display = current_display[:-1]
         elif button == "pi":
             display = current_display + fm.pi()
+        elif button == "raiz":
+            numero = int(current_display)
+            display = fm.raiz(numero)
+        elif button in ["sen","cos","tg"]:
+            try:
+                numero = float(current_display)
+                if button == "sen":
+                    display = fm.sen(numero)
+                elif button == "cos":
+                    display = fm.cos(numero)
+                else:
+                    display = fm.tg(numero)
+            except:
+                display = ""
         else:
             display = current_display + button
 
