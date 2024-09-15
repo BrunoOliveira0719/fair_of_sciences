@@ -18,7 +18,9 @@ def calculadora():
                     display = fm.calculator_basic(current_display)
                 except Exception as e:
                     display = ""
-            elif button in ["del","C"]:
+            elif button == '...':
+                pass
+            elif button in ["del","CE"]:
                 if button == "del":
                     display = current_display[:-1]
                 else:

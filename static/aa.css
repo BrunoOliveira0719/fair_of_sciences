@@ -1,10 +1,48 @@
 *{
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    text-decoration: none;
 }
 
 body{
     background-image: linear-gradient(45deg,rgb(0, 155, 155), rgb(0, 124, 77)) ;
+}
+
+.nav{
+    background-color: #1d1d1d;
+}
+
+.nav li{
+    display: inline-block;
+}
+
+.nav li a{
+    display: inline-block;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.nav li a:hover{
+    background-color: #000;
+}
+
+.menu_dropdown{
+    position: absolute;
+    box-shadow: 0 0 2px #000;
+    display: none;
+}
+
+.menu_dropdown a{
+    display: block;
+    color: #000;
+}
+
+.dropdown:hover .menu_dropdown{
+    display: block;
+}
+
+.center{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -15,7 +53,7 @@ body{
 
 .calculadora{
     height: 350px;
-    width: 400px;
+    width: 290px;
     border-radius: 5%;
     background-color: #1d1d1d;
 }
@@ -28,7 +66,7 @@ body{
 }
 
 .button{
-    margin: 4px;
+    margin-left: 9px;
 }
 
 .button input{
