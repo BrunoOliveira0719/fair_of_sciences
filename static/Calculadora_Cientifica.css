@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+body{
+    background-image: linear-gradient(45deg,rgb(0, 155, 155), rgb(0, 124, 77)) ;
+}
+
+.nav{
+    background-color: #1d1d1d;
+}
+
+.nav li{
+    display: inline-block;
+}
+
+.nav li a{
+    display: inline-block;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.nav li a:hover{
+    background-color: #000;
+}
+
+.menu_dropdown{
+    position: absolute;
+    box-shadow: 0 0 2px #000;
+    display: none;
+}
+
+.menu_dropdown a{
+    display: block;
+    color: #000;
+}
+
+.dropdown:hover .menu_dropdown{
+    display: block;
+}
+
+.center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.calculadora{
+    height: 360px;
+    width: 390px;
+    border-radius: 5%;
+    background-color: #1d1d1d;
+}
+
+.titulo h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    margin-top: 3px;
+    text-align: center;
+}
+
+.button{
+    margin-left: 9px;
+}
+
+.button input{
+    font-size: larger;
+    text-align: right;
+    color: #000;
+    margin: 5px;
+    border-radius: 5%;
+    height: 20px;
+    width: 90%;
+    outline: none;
+}
+
+.butao{
+    background-color: rgb(181, 255, 111);
+    border-radius: 50%;
+    margin: 1px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+}
