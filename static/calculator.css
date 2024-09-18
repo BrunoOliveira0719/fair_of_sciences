@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: linear-gradient(45deg,rgb(0, 155, 155), rgb(0, 124, 77)) ;
+    background-image: linear-gradient(45deg, rgb(1, 153, 255), rgb(0, 8, 124)) ;
 }
 
 .nav{
@@ -58,6 +58,13 @@ body{
     background-color: #1d1d1d;
 }
 
+.scientific_calculator{
+    height: 360px;
+    width: 390px;
+    border-radius: 5%;
+    background-color: #1d1d1d;
+}
+
 .titulo h1{
     font-family: 'Times New Roman', Times, serif;
     color: #ffffff;
@@ -66,7 +73,11 @@ body{
 }
 
 .button{
-    margin-left: 9px;
+    margin-left: 6px;
+}
+
+.button_scientific{
+    margin-left: 6px;
 }
 
 .button input{
@@ -80,8 +91,21 @@ body{
     outline: none;
 }
 
+.button_scientific input{
+    font-size: larger;
+    text-align: right;
+    color: #000;
+    margin-left: 13px;
+    margin-bottom: 8px;
+    margin-top: 5px;
+    border-radius: 5%;
+    height: 20px;
+    width: 90%;
+    outline: none;
+}
+
 .butao{
-    background-color: rgb(181, 255, 111);
+    background-color: #7a7a7a;
     border-radius: 50%;
     margin: 1px;
     width: 50px;
