@@ -70,5 +70,9 @@ def Calculadora_Cientifica():
     except Exception as e:
         return "<h1>ERROR</h1>", e
 
+@app.route('/Area', methods=['GET','POST'])
+def page_area():
+    return render_template('Khan_Academy/Area.html')
+
 if __name__ == "__main__":
     app.run(debug=True)

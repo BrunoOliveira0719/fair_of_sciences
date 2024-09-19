@@ -52,15 +52,15 @@ body{
 }
 
 .calculadora{
-    height: 350px;
-    width: 230px;
+    height: 405px;
+    width: 299px;
     border-radius: 5%;
     background-color: #1d1d1d;
 }
 
 .scientific_calculator{
-    height: 360px;
-    width: 390px;
+    height: 420px;
+    width: 507px;
     border-radius: 5%;
     background-color: #1d1d1d;
 }
@@ -107,8 +107,9 @@ body{
 .butao{
     background-color: #7a7a7a;
     border-radius: 50%;
-    margin: 1px;
-    width: 50px;
-    height: 50px;
+    margin-left: 3px;
+    margin-top: 3px;
+    width: 65px;
+    height: 60px;
     align-items: center;
 }
