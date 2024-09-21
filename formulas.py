@@ -15,6 +15,9 @@ def percentage(num):
 def pi():
     return str(mt.pi)
 
+def e():
+    return str(mt.e)
+
 def sen(num):
     return str(mt.sin(mt.radians(num)))
 
@@ -37,17 +40,26 @@ def factorial(num):
     return str(mt.factorial(num))
 
 def radians_degrees(num):
-    return mt.degrees(num)
+    return str(mt.degrees(num))
 
 def degrees_radians(num):
-    return mt.radians(num)
+    return str(mt.radians(num))
 
+#areas
 def triangle_area(base, heigth):
-    return base * heigth / 2
+    return str((base * heigth) / 2)
 
-def rectangle_area(base, heigth):
-    return base * heigth
+def rectangle_square_area(base, heigth):
+    return str(base * heigth)
 
+def trapezoid_area(b_base, heigth, B_base):
+    return str(((b_base + B_base)*heigth)/ 2)
+    
+def circle_area(ray):
+    return str(pi()*(ray**2))
+
+def diamond_area(D_diagonal, d_diagonal):
+    return str((D_diagonal * d_diagonal)/ 2)
 #financial sector
 def ROI(revenue, expenses):
     return (revenue - expenses) / expenses
