@@ -78,10 +78,10 @@ def Calculadora_Cientifica():
                 except:
                     display = ""
             
-            elif "mod" in current_display:
+            elif "mod()" in current_display:
                 try:
                     numero = int(current_display.split("mod")[0])
-                    divisor = int(current_display.split("mod")[1])
+                    divisor = int(current_display.split("mod(")[1])
                     display = fm.mod(numero,divisor)
                 except:
                     display = ""
@@ -94,6 +94,11 @@ def Calculadora_Cientifica():
 @app.route('/Area', methods=['GET','POST'])
 def page_area():
     return render_template('Khan_Academy/Area.html')
+
+@app.route("/pitagoras", methods=['GET','POST'])
+def page_pitagoras():
+    return render_template("Khan_Academy/pitagoras.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
