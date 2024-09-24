@@ -9,14 +9,20 @@ def infinite(num):
 def combination(k, n):
     return mt.comb(k, n)
 
-def percentage(num):
-    return str(num/100)
+def percentage(num, porcentagem = 1):
+    return str((num*porcentagem)/100)
 
 def pi():
     return str(mt.pi)
 
 def e():
     return str(mt.e)
+
+def ABS(num):
+    return str(abs(num))
+
+def mod(num1,num2):
+    return str(mt.fmod(num1,num2))
 
 def sen(num):
     return str(mt.sin(mt.radians(num)))
@@ -60,6 +66,7 @@ def circle_area(ray):
 
 def diamond_area(D_diagonal, d_diagonal):
     return str((D_diagonal * d_diagonal)/ 2)
+
 #financial sector
 def ROI(revenue, expenses):
     return (revenue - expenses) / expenses
@@ -86,7 +93,8 @@ def identify_button(button,current_display, display):
             return display
     elif button == "%":
         try:
-            numero = int(current_display)
+            numero = float(current_display)
+
             display = percentage(numero)
             return display
         except:

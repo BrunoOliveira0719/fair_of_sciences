@@ -45,6 +45,17 @@ def Calculadora_Cientifica():
                         display = fm.factorial(numero)
                     except: 
                         display = ""
+                        
+            elif button in ["e","abs"]:
+                if button == "e":
+                    display = fm.e()
+                else:
+                    try:
+                        numero = int(current_display)
+                        display = fm.ABS(numero)
+                    except:
+                        display = ""
+                        
             elif button in ["log","in"]:
                 try:
                     numero = int(current_display)
@@ -54,6 +65,7 @@ def Calculadora_Cientifica():
                         display = fm.log(numero)
                 except:
                     display = ""
+                   
             elif button in ["sen","cos","tg"]:
                 try:
                     numero = float(current_display)
@@ -65,6 +77,15 @@ def Calculadora_Cientifica():
                         display = fm.tg(numero)
                 except:
                     display = ""
+            
+            elif "mod" in current_display:
+                try:
+                    numero = int(current_display.split("mod")[0])
+                    divisor = int(current_display.split("mod")[1])
+                    display = fm.mod(numero,divisor)
+                except:
+                    display = ""
+                    
              
         return render_template("Calculadora_Cientifica.html", display=display)
     except Exception as e:
@@ -76,3 +97,13 @@ def page_area():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    
+    
+    
+    # else:
+    #                 try:
+    #                     numero = int(current_display)
+    #                     divisor = int(current_display.split("mod")[1])
+    #                     display = fm.mod(numero,divisor)
+    #                 except:
+    #                     display = ""
