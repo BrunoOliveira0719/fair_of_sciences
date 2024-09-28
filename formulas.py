@@ -28,7 +28,7 @@ def sen(num):
     return str(mt.sin(mt.radians(num)))
 
 def cos(num):
-    return str(mt.cos(num))
+    return str(mt.cos(mt.radians(num)))
 
 def tg(num):
     return str(mt.tan(mt.radians(num)))
@@ -93,10 +93,14 @@ def identify_button(button,current_display, display):
             return display
     elif button == "%":
         try:
-            numero = float(current_display)
+            if "+" in current_display:
+                base, percentage_int = current_display.split("+")
+                porcentagem = int(percentage_int.strip().rstrip("%"))
+                numero = float(base.strip())
+                
 
-            display = percentage(numero)
-            return display
+                display = str(numero + percentage(numero,porcentagem))
+                return display
         except:
             display = ''
             return display

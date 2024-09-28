@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
-import math as mt 
 import formulas as fm
+import calcula as cl
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def calculadora():
             button = request.form.get('button')
             current_display = request.form.get('display', '')
         
-            display = fm.identify_button(button,current_display,display)
+            display = cl.identify_button(button,current_display,display)
         
         return render_template("main.html", display=display)
     except Exception as e:
@@ -78,10 +78,10 @@ def Calculadora_Cientifica():
                 except:
                     display = ""
             
-            elif "mod()" in current_display:
+            elif "mod" in current_display:
                 try:
                     numero = int(current_display.split("mod")[0])
-                    divisor = int(current_display.split("mod(")[1])
+                    divisor = int(current_display.split("mod")[1])
                     display = fm.mod(numero,divisor)
                 except:
                     display = ""
@@ -102,13 +102,3 @@ def page_pitagoras():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
-    
-    
-    # else:
-    #                 try:
-    #                     numero = int(current_display)
-    #                     divisor = int(current_display.split("mod")[1])
-    #                     display = fm.mod(numero,divisor)
-    #                 except:
-    #                     display = ""
