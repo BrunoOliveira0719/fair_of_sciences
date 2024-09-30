@@ -74,37 +74,3 @@ def ROI(revenue, expenses):
 #phamaceutical sector
 def dose_medication(weigth):
     return weigth * 2
-
-
-def identify_button(button,current_display, display):
-    if button == "=":
-        try:
-            display = calculator_basic(current_display)
-            return display
-        except Exception as e:
-            display = ""
-            return display
-    elif button in ["del","CE"]:
-        if button == "del":
-            display = current_display[:-1]
-            return display
-        else:
-            display = ""
-            return display
-    elif button == "%":
-        try:
-            if "+" in current_display:
-                base, percentage_int = current_display.split("+")
-                porcentagem = int(percentage_int.strip().rstrip("%"))
-                numero = float(base.strip())
-                
-
-                display = str(numero + percentage(numero,porcentagem))
-                return display
-        except:
-            display = ''
-            return display
-        
-    else:
-        display = current_display + button
-        return display

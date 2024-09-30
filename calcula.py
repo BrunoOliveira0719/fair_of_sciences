@@ -12,14 +12,12 @@ def identify_button(button,current_display, display):
         else:
             display = ""
     elif button == "%":
+        operacoes = ["-","+","*","/"]
         try:
-            if "+" in current_display:
-                base, percentage_int = current_display.split("+")
-                porcentagem = int(percentage_int.strip().rstrip("%"))
-                numero = float(base.strip())
-                
-
-                display = str(numero + fm.percentage(numero,porcentagem))
+            lista = (current_display).split
+            numero = lista[0]
+            
+            display = str(numero + fm.percentage(numero))
         except:
             display = ''
     else:
@@ -27,7 +25,10 @@ def identify_button(button,current_display, display):
     return display
     
 
-def identify_button_scientific(button,current_display, display):          
+def identify_button_scientific(button,current_display, display):   
+    
+    display = identify_button(button,current_display,display)
+           
     if button in ["pi","raiz","fatorial"]:
         if button == "pi":
             display = current_display + fm.pi()
@@ -76,12 +77,5 @@ def identify_button_scientific(button,current_display, display):
         except:
             display = ""
             
-    elif "mod" in current_display:
-        try:
-            numero = int(current_display.split("mod")[0])
-            divisor = identify_button_scientific(button,current_display, display)
-            display = fm.mod(numero,divisor)
-        except:
-            display = ""
     return display
                     
