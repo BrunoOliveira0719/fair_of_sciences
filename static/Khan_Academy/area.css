@@ -63,8 +63,8 @@ input{
 }
 
 .baixo{
-    margin: 20px;
-    width: 40px;
+    margin: 15px;
+    width: 70px;
 }
 
 .shape1{
@@ -92,6 +92,7 @@ input{
 .organization_triangle{
     display: grid;
     grid-template-rows: auto auto;
+
 }
 
 .shape3{
@@ -116,12 +117,35 @@ input{
     height: 250px;
     background-color: chartreuse;
     clip-path: polygon(22% 27%, 82% 27%, 100% 84%, 0 84%);
+    display: grid;
+    grid-template-columns: 0 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.organization_rectangle{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
 }
 
 .shape5{
     width: 270px;
     height: 160px;
     background-color: deeppink;
+    display: grid;
+    grid-template-columns: 0 0;
+    grid-template-rows: 0 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.organization_diamond{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    position: relative;
 }
 
 .shape6{
@@ -129,6 +153,52 @@ input{
     height: 250px;
     background-color:darkslateblue;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: relative;
+}
+
+.line-vertical {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+    transform: translateX(-50%);
+}
+
+.line-horizontal {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(-50%);
+}
+
+.input-heigth {
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    margin-top: 10px;
+}
+
+.input-width {
+    position: absolute;
+    top: 52%;
+    left: 30%;
+    width: 50px;
+    transform: translate(-50%, -50%);
+    margin-left: 10px;
+}
+
+.organization_pitagoras{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .shape7{
