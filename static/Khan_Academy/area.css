@@ -64,7 +64,7 @@ input{
 
 .baixo{
     margin: 15px;
-    width: 70px;
+    width: 50px;
 }
 
 .shape1{
@@ -193,17 +193,46 @@ input{
     margin-left: 10px;
 }
 
-.organization_pitagoras{
+.organization_pitagoras {
+    position: relative;
+    width: 600px;
+    height: 600px;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
     justify-content: center;
     align-items: center;
 }
 
-.shape7{
+.shape7 {
     width: 600px;
     height: 600px;
-    background-color:rgb(62, 40, 201);
+    background-color: rgb(62, 40, 201);
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    position: relative;
+}
+
+.pitagoras_inputs {
+    width: 100px;
+    height: 30px;
+    background-color: #ffffff;
+}
+
+.pitagoras_inputs[name="catetoA"] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pitagoras_inputs[name="hipotenusa"] {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translateX(-50%);
+}
+
+.pitagoras_inputs[name="catetoB"] {
+    position: absolute;
+    bottom: 0%;
+    left: 40%;
+    transform: translateX(-50%);
+    margin-top: 10px;
 }
