@@ -16,7 +16,7 @@ def calculadora():
         
         return render_template("main.html", display=display)
     except Exception as e:
-        return "<h1>ERROR</h1>", e
+        return f"<h1>ERROR</h1> {e}"
     
 @app.route("/Calculadora_Cientifica",  methods=['GET','POST'])
 def Calculadora_Cientifica(): 
@@ -31,7 +31,7 @@ def Calculadora_Cientifica():
             
         return render_template("Calculadora_Cientifica.html", display=display)
     except Exception as e:
-        return "<h1>ERROR</h1>", e
+        return f"<h1>ERROR</h1> {e}"
 
 @app.route('/Area', methods=['GET','POST'])
 def page_area():
@@ -39,7 +39,20 @@ def page_area():
 
 @app.route("/pitagoras", methods=['GET','POST'])
 def page_pitagoras():
-    return render_template("Khan_Academy/pitagoras.html")
+    try:
+        display = ""
+        
+        if request.method == 'POST':
+            cateto_A = request.form.get('catetoA', '').strip()
+            cateto_B = request.form.get('catetoB', '').strip()
+            hipotenusa = request.form.get('hipotenusa', '').strip()
+
+            display = cl.identify_function_pitagoras(cateto_A, cateto_B, hipotenusa)
+
+        return render_template("Khan_Academy/pitagoras.html", display=display)
+    
+    except Exception as e:
+        return f"<h1>ERROR</h1> {e}"
 
 
 if __name__ == "__main__":

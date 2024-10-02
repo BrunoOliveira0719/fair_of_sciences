@@ -27,10 +27,13 @@
     <div class="body">
         <form action="/pitagoras" method="post">
             <div class="organization_pitagoras">
-                <div class="shape7"></div>
+                <div class="shape7">
+                    <input class="display_pitagoras" type="text" name="display" value="{{ display }}" placeholder="Resultado" readonly>
+                </div>
                 <input class="pitagoras_inputs" type="text" name="catetoA" placeholder="Cateto A">
                 <input class="pitagoras_inputs" type="text" name="hipotenusa" placeholder="Hipotenusa">
                 <input class="pitagoras_inputs" type="text" name="catetoB" placeholder="Cateto B">
+                <button class="pitagoras_inputs" name="button" value="=">=</button>
             </div>
         </form>
     </div>

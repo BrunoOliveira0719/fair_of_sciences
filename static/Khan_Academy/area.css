@@ -208,6 +208,15 @@ input{
     background-color: rgb(62, 40, 201);
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
     position: relative;
+    display: grid;
+    align-items: center;
+}
+
+.display_pitagoras{
+    margin-left: 30%;
+    width: 100px;
+    height: 30px;
+    background-color: #ffffff;
 }
 
 .pitagoras_inputs {
@@ -235,4 +244,14 @@ input{
     left: 40%;
     transform: translateX(-50%);
     margin-top: 10px;
+}
+
+.pitagoras_inputs[name='button']{
+    position: absolute;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    left: 90%;
+    width: 65px;
+    height: 60px;
+    align-items: center;
 }

@@ -14,10 +14,10 @@ def identify_button(button,current_display, display):
     elif button == "%":
         operacoes = ["-","+","*","/"]
         try:
-            lista = (current_display).split
-            numero = lista[0]
+            list = (current_display).split
+            number = list[0]
             
-            display = str(numero + fm.percentage(numero))
+            display = str(number + fm.percentage(number))
         except:
             display = ''
     else:
@@ -34,15 +34,15 @@ def identify_button_scientific(button,current_display, display):
             display = current_display + fm.pi()
         elif button == "raiz":
             try:
-                numero = int(current_display)
-                display = fm.square_root(numero)
+                number = int(current_display)
+                display = fm.square_root(number)
             except:
                 display = ""
         else:
             try:
-                numero = int(current_display)
-                display = fm.factorial(numero)
-            except: 
+                number = int(current_display)
+                display = fm.factorial(number)
+            except:
                 display = ""
                         
     elif button in ["e","abs"]:
@@ -50,32 +50,56 @@ def identify_button_scientific(button,current_display, display):
             display = fm.e()
         else:
             try:
-                numero = int(current_display)
-                display = fm.ABS(numero)
+                number = int(current_display)
+                display = fm.ABS(number)
             except:
                 display = ""
                         
     elif button in ["log","in"]:
         try:
-            numero = int(current_display)
+            number = int(current_display)
             if button == "in":
-                display = fm.IN(numero)
+                display = fm.IN(number)
             else:
-                display = fm.log(numero)
+                display = fm.log(number)
         except:
             display = ""
                    
     elif button in ["sen","cos","tg"]:
         try:
-            numero = float(current_display)
+            number = float(current_display)
             if button == "sen":
-                display = fm.sen(numero)
+                display = fm.sen(number)
             elif button == "cos":
-                display = fm.cos(numero)
+                display = fm.cos(number)
             else:
-                display = fm.tg(numero)
+                display = fm.tg(number)
         except:
             display = ""
             
     return display
-                    
+
+def identify_function_pitagoras(cateto_A, cateto_B, hipotenusa):
+    try:
+        msg_error = 'Preencha os dois campos'
+        if not hipotenusa:
+            if cateto_A and cateto_B:
+                display = fm.find_hipotenusa(float(cateto_A), float(cateto_B))
+            else:
+                display = msg_error
+            
+        elif not cateto_A:
+            if hipotenusa and cateto_B:
+                display = fm.find_cateto_A(float(hipotenusa), float(cateto_B))
+            else:
+                display = msg_error
+            
+        elif not cateto_B:
+            if hipotenusa and cateto_A:
+                display = fm.find_cateto_B(float(hipotenusa), float(cateto_A))
+            else:
+                display = msg_error
+             
+    except Exception as e:
+        display = ''
+    return display

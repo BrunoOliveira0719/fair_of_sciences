@@ -51,6 +51,19 @@ def radians_degrees(num):
 def degrees_radians(num):
     return str(mt.radians(num))
 
+def find_hipotenusa(cateto_a, cateto_b):
+    return mt.sqrt(cateto_a**2 + cateto_b**2)
+
+def find_cateto_A(hipotenusa, cateto_b):
+    if hipotenusa <= cateto_b:
+        raise ValueError("A hipotenusa deve ser maior que o cateto B.")
+    return mt.sqrt(hipotenusa**2 - cateto_b**2)
+
+def find_cateto_B(hipotenusa, cateto_a):
+    if hipotenusa <= cateto_a:
+        raise ValueError("A hipotenusa deve ser maior que o cateto A.")
+    return mt.sqrt(hipotenusa**2 - cateto_a**2)
+
 #areas
 def triangle_area(base, heigth):
     return str((base * heigth) / 2)
