@@ -12,13 +12,28 @@ def identify_button(button,current_display, display):
         else:
             display = ""
     elif button == "%":
-        operacoes = ["-","+","*","/"]
+        operacoes = ["-", "+", "*", "/"]
         try:
-            list = (current_display).split
-            number = list[0]
-            
-            display = str(number + fm.percentage(number))
-        except:
+            for i in operacoes:
+                if i in current_display:
+                    num_list = current_display.split(i)
+                    number = float(num_list[0]) 
+                    por = float(num_list[1]) 
+                    
+                    
+                    if i == "-":
+                        display = str(number - (number * por / 100))
+                    elif i == "+":
+                        display = str(number + (number * por / 100))
+                    elif i == "*":
+                        display = str(number * (por / 100))
+                    elif i == "/":
+                        display = str(number / (por / 100))
+                    
+                    break
+            else:
+                display = fm.percentage(float(current_display))
+        except Exception as e:
             display = ''
     else:
         display = current_display + button
