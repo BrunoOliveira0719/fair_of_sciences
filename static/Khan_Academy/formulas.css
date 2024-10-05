@@ -43,3 +43,10 @@ body{
 .dropdown:hover .menu_dropdown{
     display: block;
 }
+
+.body{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around
+    
+}
