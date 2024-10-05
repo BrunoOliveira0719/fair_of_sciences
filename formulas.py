@@ -51,6 +51,7 @@ def radians_degrees(num):
 def degrees_radians(num):
     return str(mt.radians(num))
 
+#pitagoras
 def find_hipotenusa(cateto_a, cateto_b):
     return mt.sqrt(cateto_a**2 + cateto_b**2)
 
@@ -80,10 +81,33 @@ def circle_area(ray):
 def diamond_area(D_diagonal, d_diagonal):
     return str((D_diagonal * d_diagonal)/ 2)
 
-#financial sector
-def ROI(revenue, expenses):
-    return (revenue - expenses) / expenses
+#sector
+def primeiro_grau(a,b,display):
+    x = (-1*b)/(-1*a)
+    display = x
+    return display
 
-#phamaceutical sector
-def dose_medication(weigth):
-    return weigth * 2
+def segundo_grau(a,b,c,display):
+    delta = b**2 - 4*a*c
+    
+    raiz = ((-1*b) + mt.sqrt(delta))/2*a
+    raiz2 = ((-1*b) - mt.sqrt(delta))/2*a
+    
+    if delta == 0:
+        display = f"x1,x2 = {raiz}"
+    elif delta > 0:
+        display = f"x1 = {raiz} e x2 = {raiz2}"
+    elif delta < 0:
+        display = "não tem raiz real"
+    
+    return display
+
+def pa(a1,n,r,display):
+    an = a1 + ((n-1)*r)
+    display = an
+    return display
+
+def pg(a1,n,q,display):
+    an = a1 * (q ** n-1)
+    display = an
+    return display

@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#7a7a7a,#1d1d1d);
+}
+
+.nav{
+    background-color: #1d1d1d;
+}
+
+.nav li{
+    display: inline-block;
+}
+
+.nav li a{
+    display: inline-block;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.nav li a:hover{
+    background-color: #000;
+}
+
+.menu_dropdown{
+    position: absolute;
+    box-shadow: 0 0 2px #000;
+    display: none;
+}
+
+.menu_dropdown a{
+    display: block;
+    color: #000;
+}
+
+.dropdown:hover .menu_dropdown{
+    display: block;
+}

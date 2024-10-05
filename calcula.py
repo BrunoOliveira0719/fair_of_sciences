@@ -118,3 +118,5 @@ def identify_function_pitagoras(cateto_A, cateto_B, hipotenusa):
     except Exception as e:
         display = ''
     return display
+
+

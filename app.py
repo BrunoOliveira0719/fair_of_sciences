@@ -53,6 +53,11 @@ def page_pitagoras():
     
     except Exception as e:
         return f"<h1>ERROR</h1> {e}"
+    
+@app.route("/formulas", methods=['GET','POST'])
+def page_formulas():
+    display = ""
+    return render_template("Khan_Academy/formulas.html", display=display)
 
 
 if __name__ == "__main__":
