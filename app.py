@@ -35,7 +35,31 @@ def Calculadora_Cientifica():
 
 @app.route('/Area', methods=['GET','POST'])
 def page_area():
-    return render_template('Khan_Academy/Area.html')
+    try:
+        display = ""
+        
+        if request.method == 'POST':
+            quadrado = request.form.get("side")
+            circulo = request.form.get("radius")
+            base_triangle = request.form.get("base_triangle")
+            heigth_triangle = request.form.get("heigth_triangle")
+            triangulo = [base_triangle, heigth_triangle]
+            
+            trapezio = []
+            base_rectangle = request.form.get("base_rectangle")
+            heigth_rectangle = request.form.get("heigth_rectangle")
+            retangulo = [base_rectangle, heigth_rectangle]
+            width_diamond = request.form.get("width_diamond")
+            heigth_diamond = request.form.get("heigth_diamond")
+            Losango = [width_diamond,heigth_diamond]
+            
+            cl.identify_function_area(quadrado,circulo,triangulo,trapezio,retangulo,Losango)
+        
+        return render_template('Khan_Academy/Area.html', display=display)
+    
+    except Exception as e:
+        return f"<h1>ERROR</h1> {e}"
+    
 
 @app.route("/pitagoras", methods=['GET','POST'])
 def page_pitagoras():

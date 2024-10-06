@@ -66,6 +66,9 @@ def find_cateto_B(hipotenusa, cateto_a):
     return mt.sqrt(hipotenusa**2 - cateto_a**2)
 
 #areas
+def square_area(lado):
+    return str(lado*lado)
+
 def triangle_area(base, heigth):
     return str((base * heigth) / 2)
 

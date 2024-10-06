@@ -67,6 +67,12 @@ input{
     width: 50px;
 }
 
+.input_resposta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .shape1{
     width: 200px;
     height: 200px;

@@ -120,3 +120,34 @@ def identify_function_pitagoras(cateto_A, cateto_B, hipotenusa):
     return display
 
 
+
+def identify_function_area(quadrado, circulo, triangulo, trapezio, retangulo, Losango):
+    try:
+        if quadrado:
+            display = fm.square_area(quadrado)
+        elif circulo:
+            display = fm.circle_area(circulo)
+        elif triangulo:
+            if triangulo[0] and triangulo[1]:
+                display = fm.triangle_area(triangulo[0],triangulo[1])
+            else:
+                display = ""
+        elif trapezio:
+            if trapezio[0] and trapezio[1] and trapezio[2]:
+                display = fm.trapezoid_area(trapezio[0], trapezio[1], trapezio[2])
+            else:
+                display = ""
+        elif retangulo:
+            if retangulo[0] and retangulo[1]:
+                display = fm.rectangle_square_area(retangulo[0],retangulo[1])
+            else:
+                display = ""
+        else:
+            if Losango[0] and Losango[1]:
+                display = fm.diamond_area(Losango[0],Losango[1])
+            else:
+                display = ""
+                
+    except Exception as e:
+        display = ""
+    return display
