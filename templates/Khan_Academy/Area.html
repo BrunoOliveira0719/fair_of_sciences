@@ -31,12 +31,14 @@
                 <div class="organization_quadrate">
                     <div class="shape1"></div>
                     <input class="baixo" type="text" name="side" placeholder="Lado">
+                    <button class="butao" name="button" value="quadrado">=</button>
                 </div>
             </form>
             <form action="/Area" method="post">
                 <div class="shape2">
                     <div class="radius"></div>
                     <input class="baixo" type="text" name="radius" placeholder="Raio">
+                    <button class="butao" name="button" value="circulo">=</button>
                 </div>
             </form>
             <form action="/Area" method="post">
@@ -45,21 +47,24 @@
                         <div class="heigth"></div>
                         <input class="baixo" type="text" name="heigth_triangle" placeholder="Altura">
                     </div>
+                    <button class="butao" name="button" value="triangulo">=</button>
                     <input class="baixo" type="text" name="base_triangle" placeholder="Base">
                 </div>
             </form>
             </tr>
         </div>
-        <input type="text" class="display_pitagoras" value="{{display}}" placeholder="resultado" readonly>
+        <input type="text" class="display_area" value="{{display}}" placeholder="resultado" readonly>
         <div class="body">
             <tr>
                 <form action="/Area" method="post">
+                    <input class="baixo" type="text" name="base_trapezoid" placeholder="base (b)">
                     <div class="organization_triangle">
                         <div class="shape4">
                             <div class="heigth"></div>
                             <input class="baixo" type="text" name="heigth_trapezoid" placeholder="Altura">                    
                         </div>
-                        <input class="baixo" type="text" name="base_trapezoid" placeholder="Base">
+                        <input class="baixo" type="text" name="Base_trapezoid" placeholder="Base (B)">
+                        <button class="butao" name="button" value="trapezio">=</button>
                     </div>
                 </form>
                 <form action="/Area" method="post">
@@ -67,6 +72,7 @@
                         <div class="shape5"></div>
                         <input class="baixo" type="text" name="heigth_rectangle" placeholder="Altura">                    
                         <input class="baixo" type="text" name="base_rectangle" placeholder="Base">
+                        <button class="butao" name="button" value="retangulo">=</button>
                     </div>
                 </form>
                 <form action="/Area" method="post">
@@ -77,6 +83,7 @@
                             <input class="baixo input-heigth" type="text" name="heigth_diamond" placeholder="Altura">
                             <input class="baixo input-width" type="text" name="width_diamond" placeholder="Largura">
                         </div>
+                        <button class="butao" name="button" value="losango">=</button>
                     </div>                
                 </form>
         </tr>

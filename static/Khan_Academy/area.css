@@ -218,6 +218,14 @@ input{
     align-items: center;
 }
 
+.display_area{
+    margin-left: 50%;
+    width: 150px;
+    height: 50px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
 .display_pitagoras{
     margin-left: 30%;
     width: 100px;
