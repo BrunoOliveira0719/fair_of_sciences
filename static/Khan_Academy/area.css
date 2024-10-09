@@ -98,7 +98,6 @@ input{
 .organization_triangle{
     display: grid;
     grid-template-rows: auto auto;
-
 }
 
 .shape3{
@@ -268,4 +267,10 @@ input{
     width: 65px;
     height: 60px;
     align-items: center;
+}
+
+.butao{
+    border-radius: 50%;
+    width: 65px;
+    height: 60px;
 }

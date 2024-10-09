@@ -45,11 +45,17 @@ def page_area():
             
             if button == "quadrado":
                 quadrado = request.form.get("side")
-                display = fm.square_area(float(quadrado))
+                if quadrado:
+                    display = fm.square_area(float(quadrado))
+                else:
+                    display = ""
                 
             elif button == "circulo":
                 circulo = request.form.get("radius")
-                display = fm.circle_area(float(circulo))
+                if circulo:
+                    display = fm.circle_area(float(circulo))
+                else:
+                    display = ""
                 
             elif button == "triangulo":
                 base_triangle = request.form.get("base_triangle")
