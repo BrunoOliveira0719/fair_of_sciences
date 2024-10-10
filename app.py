@@ -124,6 +124,21 @@ def page_formulas():
     display = ""
     return render_template("Khan_Academy/formulas.html", display=display)
 
+@app.route('/circle', methods=['GET', 'POST'])
+def page_circle():
+    display = ''
+    
+    if request.method == 'POST':        
+        button = request.form.get('button')
+    
+        if button == "circulo":
+                circulo = request.form.get("radius")
+                if circulo:
+                    display = fm.circle_area(float(circulo))
+                else:
+                    display = ""
+                    
+    return render_template('Khan_Academy/circle.html', display=display)
 
 if __name__ == "__main__":
     app.run(debug=True)

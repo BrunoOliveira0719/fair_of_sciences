@@ -152,3 +152,13 @@ def identify_function_area(quadrado, circulo, triangulo, trapezio, retangulo, lo
     except Exception as e:
         display = "Erro"
     return display
+
+def identify_function_circle(circulo, button):
+    try:
+        if button == "circulo":
+            display = fm.circle_area(circulo)
+        else:
+            display = ""        
+    except Exception as e:
+        display = "Erro"
+    return display
