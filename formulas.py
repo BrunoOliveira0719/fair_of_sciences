@@ -81,8 +81,17 @@ def trapezoid_area(b_base, heigth, B_base):
 def circle_area(ray):
     return str(3.14*(ray**2))
 
+def circle_area_diameter(diameter):
+    return str(3.14*((diameter / 2)**2))
+
 def find_radius(circumference):
     return str(circumference / 6.28)
+
+def find_circumference_diameter(diameter):
+    return 3.14 * diameter
+
+def find_circumference_radius(radius):
+    return 3.14 * (2 * radius)
 
 def diamond_area(D_diagonal, d_diagonal):
     return str((D_diagonal * d_diagonal)/ 2)

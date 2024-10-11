@@ -145,6 +145,26 @@ def page_circle():
                     display = fm.find_radius(float(circumference))
                 else:
                     display = ''
+                    
+            elif button == 'circle_diameter':
+                diameter = request.form.get('diameter').replace(',','.')
+                if diameter:
+                    display = fm.circle_area_diameter(float(diameter))
+                else:
+                    display = ''
+            elif button == 'radius_circumference':
+                radius_circumference = request.form.get('radius_circumference').replace(",",".")
+                if radius_circumference:
+                    display = fm.find_circumference_radius(float(radius_circumference))
+                else:
+                    display = ''
+                    
+            elif button == 'diameter_circumference':
+                diameter_circumference = request.form.get('diameter_circumference').replace(',','.')
+                if diameter_circumference:
+                    display = fm.find_circumference_diameter(float(diameter_circumference))
+                else:
+                    display = ''
            
     except Exception as e:
         return f"<h1>ERROR</h1> {e}"

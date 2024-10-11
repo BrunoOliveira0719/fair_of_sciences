@@ -35,18 +35,49 @@
         </tr>
         <tr>
             <form action="/circle" method="post">
-                <div class="organization_circumference">
-                <div class="circle_circumference_border">
-                    <div class="circle_circumference"></div>
+                <div class="organization_diameter">
+                    <div class="shape2_diameter">
+                        <div class="diameter"></div>
+                    </div>
+                    <input class="baixo_diameter" type="text" name="diameter" placeholder="Diametro">
+                    <button class="butao" name="button" value="circle_diameter">=</button>
                 </div>
-                <input class="baixo" type="text" name="circumference" placeholder="Circuferência">
-                <button class="butao" name="button" value="circle_circumference">=</button>
-            </div>
+            </form>
+        </tr>
+        <tr>
+            <form action="/circle" method="post">
+                <div class="organization_circumference">
+                    <div class="circle_circumference_border">
+                        <div class="circle_circumference"></div>
+                    </div>
+                    <input class="baixo_circumference" type="text" name="circumference" placeholder="Circuferência">
+                    <button class="butao" name="button" value="circle_circumference">=</button>
+                </div>
             </form>
         </tr>
     </div>
     <input type="text" class="display_area" value="{{display}}" placeholder="resultado" readonly>
     <div class="body">
+        <tr>
+            <form action="/circle" method="post">
+                <div class="shape2">
+                    <div class="radius"></div>
+                    <input class="baixo" type="text" name="radius_circumference" placeholder="Raio">
+                </div>
+                <button class="butao" name="button" value="radius_circumference">=</button>
+            </form>
+        </tr>
+        <tr>
+            <form action="/circle" method="post">
+                <div class="organization_diameter">
+                    <div class="shape2_diameter">
+                        <div class="diameter"></div>
+                    </div>
+                    <input class="baixo_diameter" type="text" name="diameter_circumference" placeholder="Diametro">
+                    <button class="butao" name="button" value="diameter_circumference">=</button>
+                </div>
+            </form>
+        </tr>
     </div>
 </body>
 

@@ -67,6 +67,18 @@ input{
     width: 50px;
 }
 
+.baixo_diameter{
+    margin-top: 50%;
+    margin: 15px;
+    width: 55px;
+}
+
+.baixo_circumference{
+    margin-top: 50%;
+    margin: 15px;
+    width: 80px;
+}
+
 .input_resposta{
     display: flex;
     justify-content: center;
@@ -87,6 +99,22 @@ input{
     display: grid;
     grid-template-columns: 50% 20px;
     align-items: center;
+}
+
+.shape2_diameter{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    clip-path: circle(50% at 50% 50%);
+    display: grid;
+    grid-template-columns: 50%;
+    align-items: center;
+}
+
+.organization_diameter{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
 }
 
 .organization_circumference{
@@ -115,6 +143,12 @@ input{
 .radius{
     height: 2px;
     width: 100%;
+    background-color: #000;
+}
+
+.diameter{
+    height: 2px;
+    width: 100vh;
     background-color: #000;
 }
 
