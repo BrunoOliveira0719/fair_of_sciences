@@ -153,12 +153,15 @@ def identify_function_area(quadrado, circulo, triangulo, trapezio, retangulo, lo
         display = "Erro"
     return display
 
-def identify_function_circle(circulo, button):
+def identify_function_circle(value, button):
     try:
-        if button == "circulo":
-            display = fm.circle_area(circulo)
+        if button == 'circle':
+            display = float(fm.circle_area(value))
+        elif button == 'circle_circumference':
+            display = fm.find_radius(value)
         else:
-            display = ""        
+            display = ""
+        
     except Exception as e:
         display = "Erro"
     return display

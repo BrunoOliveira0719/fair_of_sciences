@@ -89,6 +89,29 @@ input{
     align-items: center;
 }
 
+.organization_circumference{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.circle_circumference{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.circle_circumference_border{
+    width: 207px;
+    height: 207px;
+    background-color: #fff;
+    clip-path: circle(50% at 50% 50%);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
 .radius{
     height: 2px;
     width: 100%;
